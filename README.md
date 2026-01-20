@@ -11,3 +11,9 @@ The goal is to document my learning process in programming and applied engineeri
 ## Tools
 - Python
 - Git/GitHub
+
+## Roadmap
+- [x] Basic electrical calculations
+- [ ] Ohm's law functions
+- [ ] Simple simulations
+- [ ] Control fundamentals
