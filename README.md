@@ -1,19 +1,11 @@
-# Engineering Foundations
+## About
+This repository documents my learning journey in engineering, with a focus on
+control, automation, electrical systems, and applied programming.
 
-This repository contains my first engineering-related studies and experiments.
-The goal is to document my learning process in programming and applied engineering.
+## Structure
+- python/ → basic engineering calculations and scripts
 
-## Topics
-- Python basics for engineering
-- Mathematical problem solving
-- Simple simulations
-
-## Tools
-- Python
-- Git/GitHub
-
-## Roadmap
-- [x] Basic electrical calculations
-- [ ] Ohm's law functions
-- [ ] Simple simulations
-- [ ] Control fundamentals
+## Goals
+- Build solid foundations in engineering mathematics and programming
+- Apply theory through small practical examples
+- Evolve this repository throughout my degree
