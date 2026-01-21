@@ -5,25 +5,14 @@ Author: Ruan Vitorino Souza
 Description:
 Simple electrical calculations used as part of engineering studies.
 """
+def eletrical_power(voltage, current):
+  return voltage * current
 
-# Electrical parameters
-voltage = 220  # Volts
-current = 5    # Amperes
+def ohms_law(voltage_ohm, current_ohm):
+  return voltage / current
 
-# Power calculation
-power = voltage * current
+power = eletrical_power(220, 5)
+resistance = ohms_law(12, 2)
 
-print(f"Voltage: {voltage} V")
-print(f"Current: {current} A")
-print(f"Electrical Power: {power} W")
-
-# Ohm's Law calculation
-voltage_ohm = 12  # Volts
-current_ohm = 2   # Amperes
-
-resistance = voltage_ohm / current_ohm
-
-print("\nOhm's Law Example")
-print(f"Voltage: {voltage_ohm} V")
-print(f"Current: {current_ohm} A")
+print(f"Power: {power} W")
 print(f"Resistance: {resistance} Ohms")
