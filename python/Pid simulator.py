@@ -2,7 +2,7 @@
 =============================================================
   Simulador de Controlador PID - Resposta ao Degrau
 =============================================================
-  Autor: [Seu Nome]
+  Autor: [Ruan Vitorino]
   Descrição:
     Simula um controlador PID aplicado a um sistema de
     segunda ordem (planta típica de processos industriais).
@@ -31,17 +31,14 @@ import matplotlib.gridspec as gridspec
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.animation import FuncAnimation
 
-
 # ─────────────────────────────────────────────
 #  PLANTA DO SISTEMA (modelo matemático)
 # ─────────────────────────────────────────────
-
 class Planta:
     """
     Representa o sistema físico a ser controlado.
 
-    Modelo: sistema de 2ª ordem com atraso (muito comum em
-    processos térmicos, mecânicos e industriais).
+    Modelo: sistema de 2ª ordem com atraso.
 
     Função de transferência:
         G(s) = K / (tau1*s + 1)(tau2*s + 1)
@@ -83,11 +80,9 @@ class Planta:
 
         return self.x1   # Saída = primeiro estado
 
-
 # ─────────────────────────────────────────────
 #  CONTROLADOR PID
 # ─────────────────────────────────────────────
-
 class ControladorPID:
     """
     Implementação discreta do controlador PID.
@@ -153,11 +148,9 @@ class ControladorPID:
 
         return u_saturado, {"P": P, "I": I, "D": D}
 
-
 # ─────────────────────────────────────────────
 #  FUNÇÕES DE SIMULAÇÃO E MÉTRICAS
 # ─────────────────────────────────────────────
-
 def simular(Kp, Ki, Kd, t_total=10.0, dt=0.01, referencia=1.0):
     """
     Executa a simulação completa do sistema em malha fechada.
@@ -250,11 +243,9 @@ def calcular_metricas(t, y, referencia=1.0, tolerancia=0.02):
         "erro_regime":   round(erro_regime, 2),
     }
 
-
 # ─────────────────────────────────────────────
 #  INTERFACE GRÁFICA (tkinter + matplotlib)
 # ─────────────────────────────────────────────
-
 class AppPID:
     """
     Interface gráfica do Simulador PID.
@@ -594,11 +585,9 @@ class AppPID:
             entry.insert(0, val)
         self._simular_e_plotar()
 
-
 # ─────────────────────────────────────────────
 #  PONTO DE ENTRADA
 # ─────────────────────────────────────────────
-
 if __name__ == "__main__":
     root = tk.Tk()
     root.geometry("1200x720")
